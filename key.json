@@ -1,1 +1,12 @@
-{"web":{"client_id":"968790436189-bd3v5q6okqargoiea2vq51g0miaocj2t.apps.googleusercontent.com","project_id":"artifacial-186318","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://accounts.google.com/o/oauth2/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"ZQpAZXIkmE_siKIw-kpqh12s"}}
+{
+  "type": "service_account",
+  "project_id": "artifacial-186318",
+  "private_key_id": "e2f91c188c2f97d145f22420a6208250f0ad32d4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDoLdeTi2hCHuyZ\ny2YQK8ekUddEwlgW0M3wZzoGZucdOEqnMNbuXJh/KFAd/FBzHBvN4pb4sLtsd76v\nd2dEznZB9kzMstcngVxgestj/w991ALp5MpcOgVo0YLgF7kyJo5kY93NFcdTAEFn\n5sWqNo3x+0L8XJus5Kl6rVOLsALbMBRQAYp5XjaF1nBVt/++ZGs0bYxweZ6J0z91\nCxYv03pajuv7VdGdfqU5N5NAl5Ye79ZAeRAzqCMV84lSikwUBuy4rwT9J1BtOloO\nscnGjDD3w50ap8vAWdnLzyiZ6MGhQ01XocGEv+M9yNGp3SBuYvj9dM2WJhAhpT9f\nnS+T2xFTAgMBAAECggEAK18o5rCDlNp3A1HKKporDKiXKIqPbw+pcM+vuLNvV/eE\nho/qjpNwj0xmDvvrwV0OWpsJ7cIB+QSzc86/1UwmLjNG7HQ6GfCh44n8xZzHdY9t\nzeiF3s2d5hNBOgBkgZhPQDShoeaAGiKxlSm4YhAX2wy/WiookJcUi8ymDzGdjvkk\nsWn+r0AcXE3+m1j2pvRz2MoEsuEvPsjEOIa/27W+q7KBpKqapX/dRi5ERtf/Xjj4\n6K0BQP+6T6xVAKS80l7Hq+CMxpp9FH6bCW/2Lvj1s4lBS8ypCpgoN1TaQrI2kBZV\n0DUiaSJJTOvPUtk5KKaq/lsJR+liEmkX5EK3VoRnGQKBgQD3na8uwdAk9BYmsCy/\nncZy29+EiQ1C+d0XYGoteVFbNg9ifZEA6v9c0GUIi+ASbGwVg4t1cFJlprx/Goww\nK910I5bZmPfz7L3kH4/K2iAHnm0FZ3Dn1htX9jINUTkH1OmNVXPkEfgnsMaVmd6/\nnCNit6HRco7CNAx0biEyzox72QKBgQDwCloikBG7HZWcVMOi6VuylSLXskVDK6xc\nxQLuPqKb6GhMUDBKPSf+4DYpXTBqgXYbGcttaFI7HuIgytq1M5BnQ9dNFfkldxKM\nCTAI65VEuKPUed4YmCeif02Xa24iPcB0j8RbeM8QLssBEeVDpJfmjHXIZXzk+zd9\nGHheJbNXCwKBgHB6lns82xoOLonAeXNJbj36ltwTjYyhB8d4qoKhm009j1uEAnxS\nQ1Gb8GkjcNOtoKNdL9pW/XbjeLicDJZNNrls+Tc6/1c0cUXQ+HaDAw2y738G8Ai/\n/4fDdBUMkkV2d+kVqiEt8HXHHU4TqVWMzZ4oID+OND8PeaDh7f6wSKxxAoGAIP87\nTr8BQPibJWddkVqE2XK43G/MJ6SsSABpG7kOf2IeXEc1rC7l/Zpyt5Lw4eM0Chus\npDiP/UKMkTdxgzE4a4me4iDgI+9PZGKq8L75wP2kv8OU7UqVQDhBwUvqUtisSRmu\nQ2jDBhV4oIgGPRs2KmIqmsaguZVzFkYz3bVPBusCgYEAqq9eGdR61j5c+feF/Ywr\nXZqddN4AlSKHHLcHOVQ286PGyc70mFEAVQhFkSCk0xhBfhphM8qzq5ai7mYaQb7V\nrFSWa2ppbZBU/RYDxjnRu6AbSE87LawMcFZmzrTYuTVAr5OIT3ulZTMDShTD2qd0\nhsHo3dqF636YqH05UqZmYDE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "artifacial@artifacial-186318.iam.gserviceaccount.com",
+  "client_id": "109826753038153573015",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/artifacial%40artifacial-186318.iam.gserviceaccount.com"
+}
