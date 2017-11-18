@@ -13,32 +13,36 @@
 // // Listen
 // server.listen(3000);
 
+const artifacial = require('./artificial');
 var path = require("path");
 var express = require('express'), multer = require('multer'), app = express(), port = 3000;
 app.set('port', port);
 
 var storage = multer.diskStorage({
   destination: function (request, file, callback) {
-    callback(null, '/upload/');
+    callback(null, './upload/');
   },
   filename: function (request, file, cb) {
-    crypto.pseudoRandomBytes(16, function (err, raw) {
-      if (err) return cb(err)
-      cb(null, raw.toString('hex') + path.extname(file.originalname))
-    })
+      cb(null, Date.now() + '.jpg');
   }
 });
 
 app.use(express.static('app/'));
 
-var upload = multer( { dest: 'upload/' } );
+var upload = multer( { storage : storage } );
 
 app.get('/', function(request, response) {
   response.sendFile('/index.html');
 });
 
-app.post( '/upload', upload.single( 'file' ), function( req, res, next ) {
-  return res.status(200).send(req.file);
+app.post( '/upload', upload.single('file'), function( req, res, next ) {
+  var value = res.status(200).send(req.file);
+  var url;
+  artifacial.masterFunction(value.req.file.destination + value.req.file.filename, (urlVal) =>{
+      url = urlVal;
+      console.log(url);
+  });
+  return value;
 });
 
 var server = app.listen(port, function () {

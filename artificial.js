@@ -1,12 +1,19 @@
 // Imports the Google Cloud client library
-const Vision = require('@google-cloud/vision');
 
+var masterFunction = (fileName, urlFunction) => {
+
+const Vision = require('@google-cloud/vision');
 // Creates a client
+
 const vision = new Vision();
 
- const fileName = './resources/smileguy.jpg';
+const fs = require('fs');
 
- const { Pool, Client } = require('pg')
+const replaceExt = require('replace-ext');
+
+const { Pool, Client } = require('pg')
+
+var url;
 
 const pool = new Pool({
   user: 'aojaxubs',
@@ -23,7 +30,6 @@ const client = new Client({
   password: 'mYFZD9-Nr7QqLiU4lQ-qUTzoS5yux64U',
   port: 5432,
 })
-
 
  class Emotion{
    constructor(likeliness){
@@ -130,10 +136,16 @@ vision.faceDetection({ source: { filename: fileName } })
     //console.log(myQuery);
     client.connect()
       client.query(myQuery, (err, res) => {
-        console.log(err, res.rows[0].url);
-        client.end()
+        if(!err){
+          url = res.rows[0].url;
+          urlFunction(url);
+        }
+        else{
+          console.log("Error in retrieving URL.");
+        }
+        //console.log(url);
+        client.end();
       })
-
 
     // console.log('Faces:');
     // faces.forEach((face, i) => {
@@ -144,8 +156,14 @@ vision.faceDetection({ source: { filename: fileName } })
     //   console.log(`    Surprise: ${face.surpriseLikelihood}`);
     // });
 
-
+    var myFunction = function(){
+      console.log("Test module");
+    };
   })
   .catch((err) => {
     console.error('ERROR:', err);
   });
+}
+  module.exports = {
+    masterFunction
+};
