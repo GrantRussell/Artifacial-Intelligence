@@ -44,13 +44,12 @@ app.post( '/upload', upload.single('file'), function( req, res, next ) {
 app.get('/getEmotion', function(req, res){
   var file = req.param('filename');
   var url;
-  url = artifacial.masterFunction(file, (urlVal) =>{
+  url = artifacial.masterFunction(file, (payload) =>{
     // console.log("gasp");
-      url = urlVal;
-      url = "<img src="+url+">";
+      // url = payload;
       // console.log(url);
       // return url;
-      return res.status(200).send(url);
+      return res.status(200).send(payload);
   })
   console.log(url);
   // return res.status(200).send(url);

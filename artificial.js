@@ -50,6 +50,9 @@ const client = new Client({
    getTitle(){
      return " happy as (";
    }
+   getName(){
+     return "Happy";
+   }
  }
 
  class Sad extends Emotion{
@@ -58,6 +61,9 @@ const client = new Client({
    }
    getTitle(){
      return " sad as (";
+   }
+   getName(){
+     return "Sad";
    }
  }
 
@@ -68,6 +74,9 @@ const client = new Client({
    getTitle(){
      return " surprised as (";
    }
+   getName(){
+     return "Surprised";
+   }
  }
 
  class Angry extends Emotion{
@@ -76,6 +85,9 @@ const client = new Client({
    }
    getTitle(){
      return " angry as ("
+   }
+   getName(){
+     return "Angry";
    }
  }
 
@@ -138,7 +150,16 @@ vision.faceDetection({ source: { filename: fileName } })
       client.query(myQuery, (err, res) => {
         if(!err){
           url = res.rows[0].url;
-          urlFunction(url);
+          var payload = {
+            url: url,
+            emotions: []
+          };
+          emotions.forEach((emotion) => {
+            if(emotion.likeliness >= 3){
+              payload.emotions.push(emotion.getName());
+            }
+          });
+          urlFunction(payload);
         }
         else{
           console.log("Error in retrieving URL.");
