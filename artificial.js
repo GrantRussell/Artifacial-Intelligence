@@ -1,6 +1,5 @@
 // Imports the Google Cloud client library
 
-
 var masterFunction = (fileName, url) => {
 const Vision = require('@google-cloud/vision');
 // Creates a client
@@ -77,6 +76,13 @@ const client = new Client({
    }
  }
 
+ var likelihoodEnumn = {
+   VERY_LIKELY : 4,
+   LIKELY : 3,
+   UNLIKELY : 2,
+   VERY_UNLIKELY : 1
+ };
+
  function convertLikelinessToInt(likeliness){
    if(likeliness === "VERY_LIKELY"){
      return 4;
@@ -85,7 +91,7 @@ const client = new Client({
      return 3;
    }
    else if(likeliness === "UNLIKELY"){
-     return 2;
+     return 1;
    }
    else if(likeliness === "VERY_UNLIKELY"){
      return 1;
@@ -150,7 +156,6 @@ vision.faceDetection({ source: { filename: fileName } })
     var myFunction = function(){
       console.log("Test module");
     };
-
   })
   .catch((err) => {
     console.error('ERROR:', err);
