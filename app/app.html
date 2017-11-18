@@ -41,7 +41,10 @@
                       }).done(function(data) {
                         console.log(data);
                         $('.content').toggleClass('hide');
-                        $('.content .img-ctn').append(data);
+                        for(var key in data.emotions){
+                          ('.feeling').append('<p>' + data.emotions[key] + '</p>');
+                        }
+                        $('.content .img-ctn').append('<img src="' + data.url + '">');
                       });
                       console.log( resp );
                     });
@@ -52,12 +55,10 @@
             </div>
             <div class="content hide">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 feeling">
                   <p>I see you are feeling: <p>
                   <br />
-                  <p>angry</p>
-                  <p>sad</p>
-                  <p>surprised</p>
+                  
                 </div>
                 <div class="col-md-6">
                   <p>Why don't you look at this?</p>
