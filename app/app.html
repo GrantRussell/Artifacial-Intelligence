@@ -5,14 +5,34 @@
       <li><a href="index.html">Home</a>
       <li><a class="active" href="app.html">Application</a>
     </ul>
-
     <title>Artifacial Intelligence</title>
   </head>
   <script src="assets/js/dropzone.js"></script>
   <body bgcolor=#303d51>
     <div style="text-align:center">
       <h1 class="main-title">Application Page</h1>
-      <form id="upload-widget" action="/upload-target" class="dropzone dz-clickable"></form>
+      <form id="upload" method="post" action="/upload" class="dropzone dz-clickable">
+        <div class="fallback">
+          <input name="file" type="file" />
+        </div>
+        <script type="text/javascript">
+        Dropzone.options.upload = {
+          paramName: 'file',
+          url: "/upload",
+          maxFilesize: 30, // MB
+          maxFiles: 1,
+          dictDefaultMessage: 'Drag an image here to upload, or click to select one',
+          acceptedFiles: 'image/*',
+          init: function() {
+            this.on('success', function( file, resp ){
+              console.log("Success!");
+              console.log( file );
+              console.log( resp );
+            });
+          }
+        };
+        </script>
+      </form>
     </div>
   </body>
 </html>
