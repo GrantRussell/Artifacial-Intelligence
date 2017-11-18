@@ -10,8 +10,9 @@ p, span, div{
 }
 
 .main-title {
-    margin: 1rem 0 2rem;
+    margin: 1rem 0;
     text-shadow: #000 3px 2px;
+    background: #303d51;
 }
 
 .body-ctn {
@@ -21,6 +22,11 @@ p, span, div{
 
 .main-ctn {
   background: #4b5f7f;
+  padding: 2rem 0;
+  -webkit-clip-path: polygon(90% 15%, 100% 0, 100% 100%, 0 100%, 0 26%, 10% 15%);
+  clip-path: polygon(90% 15%, 100% 0, 100% 100%, 0 100%, 0 26%, 10% 15%);
+  /*-webkit-clip-path: polygon(94% 10%, 100% 0, 100% 100%, 0 100%, 0 10%);*/
+  /*clip-path: polygon(94% 10%, 100% 0, 100% 100%, 0 100%, 0 10%);*/
 }
 
 h1 {
@@ -44,6 +50,10 @@ p {
     position: fixed;
     top: -20px;
     width: 100%;
+    top: -2.5rem;
+    padding: 1rem;
+    -webkit-clip-path: polygon(100% 46%, 90% 77%, 9% 76%, 0 100%, 0 0, 100% 0);
+    clip-path: polygon(100% 46%, 90% 77%, 9% 76%, 0 100%, 0 0, 100% 0);
 }
 
 li{
@@ -64,6 +74,10 @@ li a:hover {
 
 .active {
     background-color: #000000;
+}
+
+.padding-64 {
+  padding: 4rem;
 }
 
 /*
@@ -245,7 +259,7 @@ li a:hover {
   min-height: 150px;
   border: 2px solid rgba(0, 0, 0, 0.3);
   /*#4b5f7f*/
-  background: #4b5f7f;
+  background: #303d51;
   padding: 20px 20px;
  }
   .dropzone.dz-clickable {
@@ -259,11 +273,9 @@ li a:hover {
     display: none; }
   .dropzone.dz-drag-hover {
     border-style: solid; }
-    .dropzone.dz-drag-hover .dz-message {
-      opacity: 0.5; }
-  .dropzone .dz-message {
-    text-align: center;
-    margin: 2em 0; }
+.dropzone.dz-drag-hover .dz-message {
+  opacity: 0.5; 
+}
   .dropzone .dz-preview {
     position: relative;
     display: inline-block;
@@ -459,8 +471,9 @@ li a:hover {
         border-bottom: 6px solid #be2626; }
 
 form.dropzone.dz-clickable {
-    width: 30%;
+    width: 20%;
     margin: auto;
+    height: 175px;
 }
 
 form.dropzone div {
