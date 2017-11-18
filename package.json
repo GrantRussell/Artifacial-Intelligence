@@ -1,0 +1,26 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "connect": "^3.6.5",
+    "dropzone": "^5.2.0",
+    "serve-static": "^1.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jMichaelA/Artifacial-Intelligence.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jMichaelA/Artifacial-Intelligence/issues"
+  },
+  "homepage": "https://github.com/jMichaelA/Artifacial-Intelligence#readme"
+}
