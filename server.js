@@ -37,11 +37,11 @@ app.get('/', function(request, response) {
 
 app.post( '/upload', upload.single('file'), function( req, res, next ) {
   var value = res.status(200).send(req.file);
-  var url={
-    url : ""
-  };
-  artifacial.masterFunction(value.req.file.destination + value.req.file.filename, url);
-  console.log(url.url)
+  var url;
+  artifacial.masterFunction(value.req.file.destination + value.req.file.filename, (urlVal) =>{
+      url = urlVal;
+      console.log(url);
+  });
   return value;
 });
 

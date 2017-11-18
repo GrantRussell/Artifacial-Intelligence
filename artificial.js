@@ -1,7 +1,7 @@
 // Imports the Google Cloud client library
 
 
-var masterFunction = (fileName, url) => {
+var masterFunction = (fileName, urlFunction) => {
 const Vision = require('@google-cloud/vision');
 // Creates a client
 
@@ -12,6 +12,8 @@ const fs = require('fs');
 const replaceExt = require('replace-ext');
 
 const { Pool, Client } = require('pg')
+
+var url;
 
 const pool = new Pool({
   user: 'aojaxubs',
@@ -128,8 +130,8 @@ vision.faceDetection({ source: { filename: fileName } })
     client.connect()
       client.query(myQuery, (err, res) => {
         if(!err){
-          url.url = res.rows[0].url;
-          console.log(url.url);
+          url = res.rows[0].url;
+          urlFunction(url);
         }
         else{
           console.log("Error in retrieving URL.");
