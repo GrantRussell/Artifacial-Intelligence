@@ -27,7 +27,7 @@ p {
 
 .main-ctn {
   background: #4b5f7f;
-  padding: 2rem 0;
+  padding: 2rem 0 4rem;
   z-index: 0;
   -webkit-clip-path: polygon(90% 6%, 100% 0, 100% 82%, 91% 91%, 10% 91%, 0 100%, 0 18%, 10% 10%);
   clip-path: polygon(90% 6%, 100% 0, 100% 82%, 91% 91%, 10% 91%, 0 100%, 0 18%, 10% 10%);
@@ -56,8 +56,8 @@ p {
     width: 100%;
     top: -2.5rem;
     padding: 1rem;
-    -webkit-clip-path: polygon(100% 46%, 90% 77%, 9% 76%, 0 100%, 0 0, 100% 0);
-    clip-path: polygon(100% 46%, 90% 77%, 9% 76%, 0 100%, 0 0, 100% 0);
+    -webkit-clip-path: polygon(100% 39%, 90% 59%, 9% 76%, 0 100%, 0 0, 100% 0);
+    clip-path: polygon(100% 39%, 90% 59%, 9% 76%, 0 100%, 0 0, 100% 0);
     z-index: 1;
 }
 
@@ -92,6 +92,14 @@ li a:hover {
 
 .main-ctn p:first-child {
   margin: 0 0 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.img-ctn img {
+  max-width: 400px;
 }
 
 /*
@@ -508,6 +516,6 @@ form.dropzone div {
 
   form.dropzone.dz-clickable {
     width: 20%;
-    height: 200px;
+    height: 175px;
   }
 }
