@@ -163,6 +163,7 @@ vision.faceDetection({ source: { filename: fileName } })
   .catch((err) => {
     console.error('ERROR:', err);
   });
+  return url;
 }
   module.exports = {
     masterFunction

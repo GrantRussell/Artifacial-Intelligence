@@ -38,11 +38,25 @@ app.get('/', function(request, response) {
 app.post( '/upload', upload.single('file'), function( req, res, next ) {
   var value = res.status(200).send(req.file);
   var url;
-  artifacial.masterFunction(value.req.file.destination + value.req.file.filename, (urlVal) =>{
+  // return value;
+});
+
+app.get('/getEmotion', function(req, res){
+  var file = req.param('filename');
+  var url;
+  url = artifacial.masterFunction(file, (urlVal) =>{
+    // console.log("gasp");
       url = urlVal;
-      console.log(url);
-  });
-  return value;
+      url = "<img src="+url+">";
+      // console.log(url);
+      // return url;
+      return res.status(200).send(url);
+  })
+  console.log(url);
+  // return res.status(200).send(url);
+
+  // res.status(200).send(file);
+  // return "gasp";
 });
 
 var server = app.listen(port, function () {
