@@ -305,12 +305,12 @@ li a:hover {
 .dropzone.dz-drag-hover .dz-message {
   opacity: 0.5; 
 }
-  .dropzone .dz-preview {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    margin: 16px;
-    min-height: 100px; }
+.dropzone .dz-preview {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  min-height: 100px; 
+}
     .dropzone .dz-preview:hover {
       z-index: 1000; }
       .dropzone .dz-preview:hover .dz-details {
@@ -516,6 +516,6 @@ form.dropzone div {
 
   form.dropzone.dz-clickable {
     width: 20%;
-    height: 175px;
+    height: 220px;
   }
 }
