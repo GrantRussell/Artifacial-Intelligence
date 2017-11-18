@@ -15,7 +15,7 @@ p {
 }
 
 .main-title {
-    margin: 1rem 0;
+    margin: 6rem 0 .5rem;
     text-shadow: #000 3px 2px;
     background: #303d51;
 }
@@ -55,7 +55,7 @@ p {
     top: -20px;
     width: 100%;
     top: -2.5rem;
-    padding: 1rem;
+    padding: 2rem;
     -webkit-clip-path: polygon(100% 39%, 90% 59%, 9% 76%, 0 100%, 0 0, 100% 0);
     clip-path: polygon(100% 39%, 90% 59%, 9% 76%, 0 100%, 0 0, 100% 0);
     z-index: 1;
@@ -510,12 +510,16 @@ form.dropzone div {
 }
 
 @media only screen and (min-device-width : 1024px) {
-  form.dropzone div {
+  form.dropzone .dz-message {
     padding: 3rem;
   }
 
   form.dropzone.dz-clickable {
     width: 20%;
     height: 220px;
+  }
+
+  .dropzone .dz-preview.dz-image-preview {
+    padding: 2rem;
   }
 }
