@@ -112,8 +112,6 @@ vision.faceDetection({ source: { filename: fileName } })
       surprised.modifyLikeliness(convertLikelinessToInt(face.surpriseLikelihood));
       angry.modifyLikeliness(convertLikelinessToInt(face.angerLikelihood));
       numFaces+=1;
-
-
     });
     //console.log(happy.likeliness);
     //console.log(sad.likeliness);
