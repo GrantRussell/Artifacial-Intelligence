@@ -1,18 +1,75 @@
 <html>
   <head style="text-align:center">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css">
     <ul class="main-nav">
       <li><a href="index.html">Home</a>
-      <li><a class="active" href="app.html">Application</a>
+      <li><a class="active" href="app.html">Artifacial</a>
     </ul>
-
     <title>Artifacial Intelligence</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   </head>
   <script src="assets/js/dropzone.js"></script>
-  <body bgcolor=#303d51>
-    <div style="text-align:center">
-      <h1 class="main-title">Application Page </h1>
-      <form action="/upload-target" class="dropzone dz-clickable"></form>
+  <body>
+    <div class="body-ctn">
+        <h1 class="main-title">Artifacial Intelligence</h1>
+        <div class="main-ctn">
+          <div class="padding-64 max-contstraint">
+            <div class="content">
+              <p>Welcome to Artifacial Intelligence! Having no eyes of my own I require electronic images to analyze your current status. Please smile (or don't) take a picture of yourself and upload it here below. I will analyze your status and respond according to your emotional status. </p>
+              <form id="upload" method="post" action="/upload" class="dropzone dz-clickable">
+                <div class="fallback">
+                  <input name="file" type="file" />
+                </div>
+                <script type="text/javascript">
+                Dropzone.options.upload = {
+                  paramName: 'file',
+                  url: "/upload",
+                  maxFilesize: 30, // MB
+                  maxFiles: 1,
+                  dictDefaultMessage: 'Drag an image here to upload, or click to select one',
+                  acceptedFiles: 'image/*',
+                  init: function() {
+                    this.on('success', function( file, resp ){
+                      console.log("Success!");
+                      console.log( file );
+                      console.log( resp );
+                    });
+                  }
+                };
+                </script>
+              </form>
+            </div>
+            <div class="content hide">
+              <div class="row">
+                <div class="col-md-6">
+                  <p>I see you are feeling: <p>
+                  <br />
+                  <p>angry</p>
+                  <p>sad</p>
+                  <p>surprised</p>
+                </div>
+                <div class="col-md-6">
+                  <p>Why don't you look at this?</p>
+                  <div class="img-ctn">
+                    <!-- <img src="../assets/images/surprised-cute-kitten.jpg"> -->
+                    <iframe width="420" height="315"
+                    src="https://www.youtube.com/embed/Gs069dndIYk">
+                    </iframe>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="switch-btn">switch</button>
+        </div>
     </div>
   </body>
 </html>
+
+<script src="assets/js/hide.js"></script>
