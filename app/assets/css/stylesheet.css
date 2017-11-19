@@ -88,6 +88,7 @@ li a:hover {
 .max-contstraint {
   max-width: 1200px;
   margin: 0 auto;
+  min-height: 425px;
 }
 
 .main-ctn p:first-child {
@@ -101,6 +102,7 @@ li a:hover {
 .img-ctn img {
   max-width: 400px;
   max-height: 400px;
+  overflow: hidden;
 }
 
 /*
@@ -296,7 +298,7 @@ li a:hover {
 @media only screen and (max-device-width : 1024px) {
   .dropzone.dz-clickable .dz-message, .dropzone.dz-clickable .dz-message * {
     padding: .75rem;
-    margin-top: .5rem; 
+    margin-top: .5rem;
   }
 }
   .dropzone.dz-started .dz-message {
@@ -304,13 +306,13 @@ li a:hover {
   .dropzone.dz-drag-hover {
     border-style: solid; }
 .dropzone.dz-drag-hover .dz-message {
-  opacity: 0.5; 
+  opacity: 0.5;
 }
 .dropzone .dz-preview {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  min-height: 100px; 
+  min-height: 100px;
 }
     .dropzone .dz-preview:hover {
       z-index: 1000; }
