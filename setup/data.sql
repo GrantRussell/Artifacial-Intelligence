@@ -14,5 +14,53 @@ INSERT INTO media (type_id, emotion_id, url) VALUES (2, 2, 'https://i.ytimg.com/
 INSERT INTO media (type_id, emotion_id, url) VALUES (2, 2, 'https://i.imgur.com/MeZR6qb.jpg');
 INSERT INTO media (type_id, emotion_id, url) VALUES (2, 2, 'https://i.imgur.com/AUqtZha.jpg');
 INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://i.imgur.com/UaTvr2U.jpg');
-INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://i.imgur.com/TZpiaIMg.jpg);
+INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://i.imgur.com/TZpiaIMg.jpg');
 INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://i.imgur.com/FwtTklR.jpg');
+-- More new queries
+
+INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://media1.giphy.com/media/100QWMdxQJzQC4/200w.webp#1-grid1');
+INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://media3.giphy.com/media/3oriO0OEd9QIDdllqo/200.webp#0-grid1');
+INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://media1.giphy.com/media/14cEK1M6culzlC/200.webp#6-grid1');
+INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://media3.giphy.com/media/R6nV6C5uC16Fy/200w.webp#9-grid1');
+INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://media1.giphy.com/media/mRB9PmJFOjAw8/200w.webp#17-grid1');
+INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://media2.giphy.com/media/gcXcSRYZ9cGWY/200w.webp#20-grid1');
+INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://media2.giphy.com/media/CFPeiD6w0WXVm/200.webp#22-grid1');
+INSERT INTO media (type_id, emotion_id, url) VALUES (2, 1, 'https://media0.giphy.com/media/yXBqba0Zx8S4/200.webp#36-grid1');
+INSERT INTO media (type_id, emotion_id, url) VALUES (2, 4, 'https://media1.giphy.com/media/RHDL2c1NCMu2c/200w.webp#11-grid1');
+INSERT INTO media (type_id, emotion_id, url) VALUES (2, 4, 'https://media1.giphy.com/media/hJpV11TBx3VDi/200.webp#4-grid1');
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
+INSERT INTO media (type_id, emotion_id, url) VALUES ()
