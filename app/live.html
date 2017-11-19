@@ -1,0 +1,124 @@
+import FileSaver from 'file-saver';
+<html>
+<head style="text-align:center">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css">
+
+    <ul class="main-nav">
+        <li><a href="index.html">Home</a>
+        <li><a class="active" href="app.html">Artifacial</a>
+        <li><a href="live.html">Live</a>
+    </ul>
+    <title>Artifacial Intelligence</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div class="body-ctn">
+    <h1 class="main-title">Artifacial Intelligence</h1>
+    <div class="main-ctn">
+        <div class="padding-64 max-contstraint"> </div>
+        <form class="content">
+            <p>Welcome to Artifacial Intelligence Live!</p>
+
+            <body onload="init();">
+            <!-- <button name = "Take Snapshot" onclick = " snapshot()">Take Snapshot</button> -->
+            <button onclick="stopWebcam();">Stop WebCam</button>
+            <button onclick="snapshot();">Take Snapshot</button>
+            <button onclick="useSnap();">Use Snapshot</button>
+
+            </body>
+
+            <p><video onclick="snapshot(this);" width=300 height=220 id="video" controls autoplay></video></p>
+
+            <p> Screenshots : </p>
+            <canvas  id="myCanvas" width="300" height="220"></canvas>
+        </form>
+
+        <script>
+            //--------------------
+            // GET USER MEDIA CODE
+            //--------------------
+            navigator.getUserMedia = ( navigator.getUserMedia ||
+                navigator.webkitGetUserMedia ||
+                navigator.mozGetUserMedia ||
+                navigator.msGetUserMedia);
+
+            var video, webcamStream, canvas, ctx;
+
+            if (navigator.getUserMedia) {
+                navigator.getUserMedia (
+                    // constraints
+                    {
+                        video: true,
+                        audio: false
+                    },
+
+                    // successCallback
+                    function(localMediaStream) {
+                        video = document.querySelector('video');
+                        video.src = window.URL.createObjectURL(localMediaStream);
+                        webcamStream = localMediaStream;
+                    },
+
+                    // errorCallback
+                    function(err) {
+                        console.log("The following error occured: " + err);
+                    }
+                );
+            } else {
+                console.log("getUserMedia not supported");
+            }
+
+            function stopWebcam() {
+                event.preventDefault();
+                video.src="";
+                webcamStream.stop();
+                canvas  = document.getElementById('faceCanvas');
+                ctx = canvas.getContext('2d');
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+            }
+
+            function init() {
+                // Get the canvas and obtain a context for
+                // drawing in it
+                canvas = document.getElementById("myCanvas");
+
+                ctx = canvas.getContext('2d');
+            }
+
+
+
+            function snapshot() {
+                event.preventDefault();
+                ctx.drawImage(video, 0,0, canvas.width, canvas.height);
+            }
+
+            function useSnap(){
+                event.preventDefault();
+
+
+                canvas.toBlob(function(blob) {
+                    saveAs(blob, "pretty image.png");
+                });
+
+
+//                            var canvas = document.getElementById("canvas");
+//                                saveAs(canvas, "image.jpg");
+            }
+
+        </script>
+
+    </div>
+</div>
+</body>
+
+</html>
+
+
+
+
