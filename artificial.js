@@ -111,6 +111,9 @@ const client = new Client({
    else if(likeliness === "VERY_UNLIKELY"){
      return 1;
    }
+   else if(likeliness === "POSSIBLE"){
+     return 2;
+   }
  }
 
 var happy = new Happy(0);
@@ -131,10 +134,10 @@ vision.faceDetection({ source: { filename: fileName } })
       angry.modifyLikeliness(convertLikelinessToInt(face.angerLikelihood));
       numFaces+=1;
     });
-    //console.log(happy.likeliness);
-    //console.log(sad.likeliness);
-    //console.log(angry.likeliness);
-    //console.log(surprised.likeliness);
+    console.log(happy.likeliness);
+    console.log(sad.likeliness);
+    console.log(angry.likeliness);
+    console.log(surprised.likeliness);
     var myQuery = "WITH";
     emotions.forEach((emotion) => {
         myQuery = myQuery.concat(emotion.getTitle());
@@ -145,7 +148,7 @@ vision.faceDetection({ source: { filename: fileName } })
         myQuery = myQuery.concat("), ");
     });
     myQuery = myQuery.concat("emotion_media as (select * from happy union all select * from surprised union all select * from angry union all select * from sad) select * from emotion_media order by random() limit 1;");
-    //console.log(myQuery);
+    console.log(myQuery);
     client.connect()
       client.query(myQuery, (err, res) => {
         if(!err){
